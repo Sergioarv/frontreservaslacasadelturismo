@@ -1,0 +1,7 @@
+{
+  "name": "frontreservaslacasadelturismo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
