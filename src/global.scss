@@ -24,3 +24,49 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@media (max-width: 319.98px) {
+    footer {
+        font-size: xx-small;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+    footer {
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    footer {
+        font-size: small;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    footer {
+        font-size: small;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    footer {
+        font-size: small;
+    }
+ }
+
+ /* // Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) and (max-width: 1599.98px) { 
+    footer {
+        font-size: small;
+    }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1600px) {  
+    footer {
+        font-size: medium;
+    }
+}
