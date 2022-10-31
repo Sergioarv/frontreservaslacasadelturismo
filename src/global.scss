@@ -26,47 +26,158 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 @media (max-width: 319.98px) {
-    footer {
+    .footerdiv {
         font-size: xx-small;
+    }
+    ion-row .titulo1 { font-size: 6.6vw;} 
+    ion-row .titulo2 { font-size: 4.4vw;}
+    ion-row .titulo3 { font-size: 3.2vw;}
+    ion-row .titulo4 { font-size: 3.2vw;}
+    ion-row .titulo5 { font-size: 3vw;}
+    ion-row .titulo6 { font-size: 3vw;}
+
+    .card-flyer, ion-card {
+        width: 88vw;
+    }
+
+    .card-flyer img {
+        width: auto;
+        max-height: 100vh;
     }
 }
 
 @media (min-width: 320px) and (max-width: 575.98px) {
-    footer {
-        font-size: x-small;
+    .footerdiv {
+        font-size: xx-small;
+    }
+    ion-row .titulo1 { font-size: 6vw;} 
+    ion-row .titulo2 { font-size: 4.4vw;}
+    ion-row .titulo3 { font-size: 3.2vw;}
+    ion-row .titulo4 { font-size: 3.2vw;}
+    ion-row .titulo5 { font-size: 3vw;}
+    ion-row .titulo6 { font-size: 3vw;}
+    .card-flyer, ion-card {
+        width: 88vw;
+    }
+
+    .card-flyer img {
+        width: auto;
+        max-height: 100vh;
     }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    footer {
+    .footerdiv {
         font-size: small;
+    }
+    ion-row .titulo1 { font-size: 5vw;} 
+    ion-row .titulo2 { font-size: 3.4vw;}
+    ion-row .titulo3 { font-size: 2.2vw;}
+    ion-row .titulo4 { font-size: 2.2vw;}
+    ion-row .titulo5 { font-size: 2vw;}
+    ion-row .titulo6 { font-size: 2vw;}
+    .card-flyer, ion-card {
+        width: 44vw;
+    }
+
+    .card-flyer img {
+        height: calc(88vw/(16/9));
+        max-height: calc(100vw/(16/9));
     }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    footer {
+    .footerdiv {
         font-size: small;
+    }
+    ion-row .titulo1 { font-size: 4.6vw;} 
+    ion-row .titulo2 { font-size: 3vw;}
+    ion-row .titulo3 { font-size: 1.8vw;}
+    ion-row .titulo4 { font-size: 1.8vw;}
+    ion-row .titulo5 { font-size: 1.6vw;}
+    ion-row .titulo6 { font-size: 1.6vw;}
+    .card-flyer, ion-card {
+        width: 45vw;
+    }
+
+    .card-flyer img {
+        height: calc(90vw/(16/9));
+        max-height: calc(100vw/(16/9));
     }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-    footer {
+    .footerdiv {
         font-size: small;
+    }
+    ion-row .titulo1 { font-size: 4.6vw;} 
+    ion-row .titulo2 { font-size: 3vw;}
+    ion-row .titulo3 { font-size: 1.8vw;}
+    ion-row .titulo4 { font-size: 1.8vw;}
+    ion-row .titulo5 { font-size: 1.6vw;}
+    ion-row .titulo6 { font-size: 1.6vw;}
+    .card-flyer, ion-card {
+        width: 30vw;
+    }
+
+    .card-flyer img {
+        height: calc(60vw/(16/9));
+        max-height: calc(100vw/(16/9));
     }
  }
 
  /* // Large devices (desktops, 992px and up) */
 @media (min-width: 1200px) and (max-width: 1599.98px) { 
-    footer {
+    .footerdiv {
         font-size: small;
+    }
+    ion-row .titulo1 { font-size: 4.2vw;} 
+    ion-row .titulo2 { font-size: 2.6vw;}
+    ion-row .titulo3 { font-size: 1.4vw;}
+    ion-row .titulo4 { font-size: 1.4vw;}
+    ion-row .titulo5 { font-size: 1.2vw;}
+    ion-row .titulo6 { font-size: 1.2vw;}
+    
+    .card-flyer, ion-card {
+        width: 30vw;
+    }
+
+    .card-flyer img {
+        height: calc(60vw/(16/9));
+        max-height: calc(100vw/(16/9));
     }
  }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {  
-    footer {
+    .footerdiv {
         font-size: medium;
     }
+    ion-row .titulo1 { font-size: 3.8vw;} 
+    ion-row .titulo2 { font-size: 2.2vw;}
+    ion-row .titulo3 { font-size: 1.2vw;}
+    ion-row .titulo4 { font-size: 1.2vw;}
+    ion-row .titulo5 { font-size: 1vw;}
+    ion-row .titulo6 { font-size: 1vw;}
+    .card-flyer, ion-card {
+        width: 22vw;
+    }
+
+    .card-flyer img {
+        height: calc(44vw/(16/9));
+        max-height: calc(100vw/(16/9));
+    }
 }
+
+.card-flyer {
+    text-align: center;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px; padding: .5em;
+}
+
+ion-button {
+    text-transform: none;
+   }
