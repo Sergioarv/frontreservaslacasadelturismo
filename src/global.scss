@@ -64,6 +64,10 @@
         width: auto;
         max-height: 100vh;
     }
+
+    ion-menu::part(container) {
+        --side-max-width: 100vw;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -83,6 +87,10 @@
     .card-flyer img {
         height: calc(88vw/(16/9));
         max-height: calc(100vw/(16/9));
+    }
+
+    ion-menu::part(container) {
+        --side-max-width: 25vw;
     }
 }
 
@@ -104,6 +112,10 @@
     .card-flyer img {
         height: calc(90vw/(16/9));
         max-height: calc(100vw/(16/9));
+    }
+
+    ion-menu::part(container) {
+        --side-max-width: 25vw;
     }
 }
 
@@ -180,4 +192,14 @@
 
 ion-button {
     text-transform: none;
-   }
+}
+
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 0, 255, 0.5);
+  }
+  
+ion-menu::part(container) {
+    border-radius: 0 10px 10px 0;
+    box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+    --side-max-width: 25vw;
+}
