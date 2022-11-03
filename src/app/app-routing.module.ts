@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./components/home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'flyer',
+    loadChildren: () => import('./components/flyer/index/index.module').then( m => m.IndexPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

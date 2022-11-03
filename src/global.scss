@@ -36,13 +36,21 @@
     ion-row .titulo5 { font-size: 3vw;}
     ion-row .titulo6 { font-size: 3vw;}
 
-    .card-flyer, ion-card {
+    .card-flyer {
         width: 88vw;
     }
 
     .card-flyer img {
         width: auto;
         max-height: 100vh;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: 20vw;
+    }
+    .table tbody td {
+        width: 96vw;
+        max-width: 20vw;
     }
 }
 
@@ -56,8 +64,8 @@
     ion-row .titulo4 { font-size: 3.2vw;}
     ion-row .titulo5 { font-size: 3vw;}
     ion-row .titulo6 { font-size: 3vw;}
-    .card-flyer, ion-card {
-        width: 88vw;
+    .card-flyer {
+        width: 86vw;
     }
 
     .card-flyer img {
@@ -67,6 +75,16 @@
 
     ion-menu::part(container) {
         --side-max-width: 100vw;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: fit-content;
+    }
+    .table tbody td{
+        max-width: 60vw;
+    }
+    .table tbody td img{
+        max-height: calc(96vw/(16/9));
     }
 }
 
@@ -80,7 +98,7 @@
     ion-row .titulo4 { font-size: 2.2vw;}
     ion-row .titulo5 { font-size: 2vw;}
     ion-row .titulo6 { font-size: 2vw;}
-    .card-flyer, ion-card {
+    .card-flyer {
         width: 44vw;
     }
 
@@ -91,6 +109,17 @@
 
     ion-menu::part(container) {
         --side-max-width: 25vw;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: 20vw;
+    }
+    .table tbody td {
+        width: 96vw;
+        max-width: 30vw;
+    }
+    .table tbody td img{
+        max-height: calc(48vw/(16/9));
     }
 }
 
@@ -105,7 +134,7 @@
     ion-row .titulo4 { font-size: 1.8vw;}
     ion-row .titulo5 { font-size: 1.6vw;}
     ion-row .titulo6 { font-size: 1.6vw;}
-    .card-flyer, ion-card {
+    .card-flyer {
         width: 45vw;
     }
 
@@ -116,6 +145,17 @@
 
     ion-menu::part(container) {
         --side-max-width: 25vw;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: 20vw;
+    }
+    .table tbody td {
+        width: 96vw;
+        max-width: 35vw;
+    }
+    .table tbody td img{
+        max-height: calc(48vw/(16/9));
     }
 }
 
@@ -130,13 +170,27 @@
     ion-row .titulo4 { font-size: 1.8vw;}
     ion-row .titulo5 { font-size: 1.6vw;}
     ion-row .titulo6 { font-size: 1.6vw;}
-    .card-flyer, ion-card {
+    .card-flyer {
         width: 30vw;
     }
 
     .card-flyer img {
         height: calc(60vw/(16/9));
         max-height: calc(100vw/(16/9));
+    }
+    ion-menu::part(container) {
+        --side-max-width: 25vw;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: 20vw;
+    }
+    .table tbody td {
+        width: 96vw;
+        max-width: 28vw;
+    }
+    .table tbody td img{
+        max-height: calc(40vw/(16/9));
     }
  }
 
@@ -152,13 +206,27 @@
     ion-row .titulo5 { font-size: 1.2vw;}
     ion-row .titulo6 { font-size: 1.2vw;}
     
-    .card-flyer, ion-card {
+    .card-flyer {
         width: 30vw;
     }
 
     .card-flyer img {
         height: calc(60vw/(16/9));
         max-height: calc(100vw/(16/9));
+    }
+    ion-menu::part(container) {
+        --side-max-width: 25vw;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: 20vw;
+    }
+    .table tbody td {
+        width: 96vw;
+        max-width: 20vw;
+    }
+    .table tbody td img{
+        max-height: calc(38vw/(16/9));
     }
  }
 
@@ -173,7 +241,7 @@
     ion-row .titulo4 { font-size: 1.2vw;}
     ion-row .titulo5 { font-size: 1vw;}
     ion-row .titulo6 { font-size: 1vw;}
-    .card-flyer, ion-card {
+    .card-flyer {
         width: 22vw;
     }
 
@@ -181,8 +249,23 @@
         height: calc(44vw/(16/9));
         max-height: calc(100vw/(16/9));
     }
+    ion-menu::part(container) {
+        --side-max-width: 25vw;
+    }
+    .table thead th {
+        width: 96vw;
+        min-width: 20vw;
+    }
+    .table tbody td {
+        width: 96vw;
+        max-width: 20vw;
+    }
+    .table tbody td img{
+        max-height: calc(96vw/(16/9));
+    }
 }
 
+// Global
 .card-flyer {
     text-align: center;
     border-radius: 6px;
@@ -195,11 +278,30 @@ ion-button {
 }
 
 ion-menu::part(backdrop) {
-    background-color: rgba(255, 0, 255, 0.5);
-  }
+    background-color: rgb(106, 100, 255, 0.20);
+}
   
 ion-menu::part(container) {
     border-radius: 0 10px 10px 0;
-    box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+    box-shadow: 4px 0px 16px rgb(106, 100, 255, 0.5);
     --side-max-width: 25vw;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+    width: 100% !important;
+}
+
+.table tbody p {
+    max-height: 120px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+/* Proporciona estilo para los encabezados de las tablas */
+.thead-col {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
 }

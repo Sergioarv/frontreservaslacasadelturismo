@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Flyer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card" style="margin-right: 20px;">
+    <ion-card-header class="card-header">
+      <div class="row">
+        <div class="col-4">
+          <h5 class="card-title">Lista de Flyer</h5>
+        </div>
+        <div class="col-8">
+          <ion-button style="float: right;">
+            <ion-icon name="add-circle"></ion-icon>&nbsp;Agregar Flyer</ion-button>
+        </div>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <table class="table table-bordered table-hover table-responsive" style="overflow-x: scroll;">
+        <caption>Lista de Flyer {{ year }}</caption>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Flyer</th>
+            <th scope="col" style="width: fit-content;">Funciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- {% for flyer in listFlyer %} -->
+          <tr>
+            <td><p>Nombre Flyer</p></td>
+            <td>
+              <p>
+                jkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfg
+              </p>
+            </td>
+            <td style="text-align: center;">
+              <img src="https://img.freepik.com/vector-gratis/flyer-fotografico-viajes_23-2148051459.jpg" alt="Flyer" style="width: auto; max-width: 350px;" />
+            </td>
+            <td style="width: fit-content; justify-content: center; text-align: center;">
+              <ion-button color="secondary" style="width: fit-content;" >
+                <ion-icon name="create"></ion-icon>&nbsp;Editar
+              </ion-button>&nbsp;
+              <ion-button color="danger" style="width: fit-content;">
+                <ion-icon name="trash"></ion-icon>&nbsp;Eliminar
+              </ion-button>
+            </td>
+          </tr>
+          <!-- {% endfor %} -->
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
