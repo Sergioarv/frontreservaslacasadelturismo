@@ -278,12 +278,13 @@ ion-button {
 }
 
 ion-menu::part(backdrop) {
-    background-color: rgb(106, 100, 255, 0.20);
+    // background-color: rgb(106, 100, 255, 0.50);
+    background-color: rgb(33, 121, 167, 0.4)
 }
   
 ion-menu::part(container) {
     border-radius: 0 10px 10px 0;
-    box-shadow: 4px 0px 16px rgb(106, 100, 255, 0.5);
+    box-shadow: 8px 0px 16px rgb(0, 132, 205, 0.75);
     --side-max-width: 25vw;
 }
 
@@ -291,6 +292,7 @@ ion-menu::part(container) {
     display: table;
     border-collapse: collapse;
     width: 100% !important;
+    border-radius: 5px;
 }
 
 .table tbody p {
@@ -299,9 +301,20 @@ ion-menu::part(container) {
     overflow-wrap: break-word;
 }
 
-/* Proporciona estilo para los encabezados de las tablas */
-.thead-col {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #454d55;
+.feedback-invalid {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 90%;
+    color: #dc3545;
+}
+
+.card .card-header  {
+    color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    border-color: gray;
+}
+
+.nav-bar {
+    --background: rgb(156, 217, 151, 0.8);
+    --color: black;
 }

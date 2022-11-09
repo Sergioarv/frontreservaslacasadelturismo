@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class="nav-bar">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Editar Flyer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card" style="margin-right: 20px;">
+    <ion-card-content>
+      <form enctype="multipart/form-data" class="needs-validation form-group" [formGroup]="editFlyerForm">
+        <ion-row>
+          <ion-col size-xs="12" size-md="6" size-xl="4">
+            <ion-label for="nombre">Nombre:</ion-label>
+            <ion-input class="form-control" formControlName="nombre" id="nombre" placeholder="Ingrese Nombre" required
+              autofocus></ion-input>
+            <div class="feedback-invalid" *ngIf="!editFlyerForm.controls['nombre'].valid">Debe completar el campo o
+              Ingresar solo letras</div>
+          </ion-col>
+          <ion-col size-xs="12" size-md="6" size-xl="4">
+            <ion-label for="descripcion">Descripcion:</ion-label>
+            <textarea type="text" class="form-control" formControlName="descripcion" id="descripcion" rows="3"
+              required></textarea>
+            <div class="feedback-invalid" *ngIf="!editFlyerForm.controls['descripcion'].valid">Debe completar el campo
+            </div>
+          </ion-col>
+          <ion-col size-xs="12" size-md="6" size-xl="4">
+            <ion-label>Imagen:</ion-label>
+            <ion-button color="danger" style="margin-bottom: 10px; float: right;" (click)="quitarImagen()"
+              *ngIf="imagenPregunta || imagenMin">Quitar Imagen</ion-button>
+            <ion-input type="file" formControlName="archivo" id="archivo" accept=".png, .jpg" (change)="seleccionarImagen($event)"></ion-input>
+          </ion-col>
+          <ion-col size-xs="12" size-md="6" size-xl="4">
+            <div *ngIf="imagenMin !== null" style="text-align: center;">
+              <img src="{{ imagenMin }}" class="rounded img-thumbnail" alt="{{ imagenMin }}" style="height: 400px;">
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-button color="success" [disabled]="!editFlyerForm.valid">
+            <ion-icon name="save-outline"></ion-icon>&nbsp;Guardar
+          </ion-button>
+          <ion-button (click)="resetCreateForm()" color="dark">
+            <ion-icon name="arrow-undo-outline"></ion-icon>&nbsp;Volver
+          </ion-button>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

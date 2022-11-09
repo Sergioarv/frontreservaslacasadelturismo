@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="nav-bar">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -35,86 +35,18 @@
 
   <ion-grid>
     <ion-row class="ion-align-items-center">
-      <div style="text-align: center; justify-content: center;">
+      <div style="text-align: center; justify-content: center;" *ngFor="let flyer of listFlyer">
         <ion-card class="card-flyer">
-          <img src="https://img.freepik.com/vector-gratis/flyer-fotografico-viajes_23-2148051459.jpg" />
+          <img src="{{ flyer.urlImg }}"/>
           <ion-card-header>
             <ion-card-title>
-              Cartagena de Indias
+              {{ flyer.nombre }}
             </ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p style="height: 60px; overflow: hidden;overflow-wrap: break-word;">Here's a small text description for the
-              card content. Nothing more, nothing less.Here's a small text description for the card content. Nothing
-              more, nothing less.Here's a small text description for the card content. Nothing more, nothing less.Here's
-              a small text description for the card content. Nothing more, nothing less.Here's a small text description
-              for the card content. Nothing more, nothing less.Here's a small text description for the card content.
-              Nothing more, nothing less.Here's a small text description for the card content. Nothing more, nothing
-              less.Here's a small text description for the card content. Nothing more, nothing less.</p>
+            <p style="height: 60px; overflow: hidden;overflow-wrap: break-word;">{{ flyer.descripcion }}</p>
           </ion-card-content>
           <ion-button>Descripción</ion-button>
-        </ion-card>
-      </div>
-      <div style="text-align: center; justify-content: center;">
-        <ion-card class="card-flyer">
-          <img src="https://i.pinimg.com/originals/3e/8c/ec/3e8cec3139e6e110c5e4f7e516f6c9b9.jpg" />
-          <ion-card-header>
-            <ion-card-title>
-              Cartagena de Indias
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p style="height: 60px; overflow: hidden;overflow-wrap: break-word;">Here's a small text description for the
-              card content. Nothing more, nothing less.Here's a small text description for the card content. Nothing
-              more, nothing less.Here's a small text description for the card content. Nothing more, nothing less.Here's
-              a small text description for the card content. Nothing more, nothing less.Here's a small text description
-              for the card content. Nothing more, nothing less.Here's a small text description for the card content.
-              Nothing more, nothing less.Here's a small text description for the card content. Nothing more, nothing
-              less.Here's a small text description for the card content. Nothing more, nothing less.</p>
-          </ion-card-content>
-          <ion-button>Descripcion</ion-button>
-        </ion-card>
-      </div>
-      <div style="text-align: center; justify-content: center;">
-        <ion-card class="card-flyer">
-          <img
-            src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/5c27344dd615a_template_image_1546073165.webp" />
-          <ion-card-header>
-            <ion-card-title>
-              Cartagena de Indias
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p style="height: 60px; overflow: hidden;overflow-wrap: break-word;">Here's a small text description for the
-              card content. Nothing more, nothing less.Here's a small text description for the card content. Nothing
-              more, nothing less.Here's a small text description for the card content. Nothing more, nothing less.Here's
-              a small text description for the card content. Nothing more, nothing less.Here's a small text description
-              for the card content. Nothing more, nothing less.Here's a small text description for the card content.
-              Nothing more, nothing less.Here's a small text description for the card content. Nothing more, nothing
-              less.Here's a small text description for the card content. Nothing more, nothing less.</p>
-          </ion-card-content>
-          <ion-button>Descripcion</ion-button>
-        </ion-card>
-      </div>
-      <div style="text-align: center; justify-content: center;">
-        <ion-card class="card-flyer">
-          <img
-            src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-flyer-template-design-0d6e74d7c6fc3baba29f9429e71d2c61_screen.jpg" />
-          <ion-card-header>
-            <ion-card-title>
-              Cartagena de Indias
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p style="height: 60px; overflow: hidden;overflow-wrap: break-word;">Here's a small text description for the
-              card content. Nothing more, nothing less.Here's a small text description for the card content. Nothing
-              more, nothing less.Here's a small text description for the card content. Nothing more, nothing less.Here's
-              a small text description for the card content. Nothing more, nothing less.Here's a small text description
-              for the card content. Nothing more, nothing less.Here's a small text description for the card content.
-              Nothing more, nothing less.Here's a small text description for the card content. Nothing more, nothing
-              less.Here's a small text description for the card content. Nothing more, nothing less.</p>
-          </ion-card-content>
-          <ion-button>Descripcion</ion-button>
         </ion-card>
       </div>
     </ion-row>

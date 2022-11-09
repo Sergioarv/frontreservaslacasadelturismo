@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="nav-bar">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -15,14 +15,14 @@
           <h5 class="card-title">Lista de Flyer</h5>
         </div>
         <div class="col-8">
-          <ion-button style="float: right;">
-            <ion-icon name="add-circle"></ion-icon>&nbsp;Agregar Flyer</ion-button>
+          <ion-button style="float: right;" [routerLink]="['/flyer/create']">
+            <ion-icon name="add-circle"></ion-icon>&nbsp;Crear Flyer</ion-button>
         </div>
       </div>
     </ion-card-header>
     <ion-card-content>
-      <table class="table table-bordered table-hover table-responsive" style="overflow-x: scroll;">
-        <caption>Lista de Flyer {{ year }}</caption>
+      <table class="table table-bordered table-hover table-responsive justify-content-center" style="overflow-x: auto; margin-top: 10px;">
+        <caption style="margin-left: 10px;">Lista de Flyer {{ year }}</caption>
         <thead class="thead-dark">
           <tr>
             <th scope="col">Nombre</th>
@@ -32,16 +32,13 @@
           </tr>
         </thead>
         <tbody>
-          <!-- {% for flyer in listFlyer %} -->
-          <tr>
-            <td><p>Nombre Flyer</p></td>
+          <tr *ngFor="let flyer of listFlyer">
+            <td><p>{{ flyer.nombre }}</p></td>
             <td>
-              <p>
-                jkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfgjkdhfhdfghhhjkdhfhdfghhhjkdhfhddfgdfgdfgdfgdfg
-              </p>
+              <p>{{ flyer.descripcion }}</p>
             </td>
             <td style="text-align: center;">
-              <img src="https://img.freepik.com/vector-gratis/flyer-fotografico-viajes_23-2148051459.jpg" alt="Flyer" style="width: auto; max-width: 350px;" />
+              <img src="{{ flyer.urlImg }}" alt="Flyer" style="width: auto; max-width: 350px;" />
             </td>
             <td style="width: fit-content; justify-content: center; text-align: center;">
               <ion-button color="secondary" style="width: fit-content;" >
@@ -52,7 +49,12 @@
               </ion-button>
             </td>
           </tr>
-          <!-- {% endfor %} -->
+          <tr *ngIf="listFlyer.length === 0">
+            <td colspan="4">
+                <p style="text-align: center; font-size: x-large; color: red;">
+                    {{"Lista vacia"}}</p>
+            </td>
+        </tr>
         </tbody>
       </table>
     </ion-card-content>
